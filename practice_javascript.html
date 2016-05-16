@@ -1,0 +1,42 @@
+<!doctype html>
+
+<html>
+
+<head> </head>
+
+<body>
+
+<script>
+
+alert("We are going to use this to calculate perimeter");
+
+var question1 = prompt("What is the shape?");
+
+if (question1 == "square") {
+side1 = prompt("What is the length of a side?"); 
+perimeter1 = parseInt(side1);
+perimeter2 = perimeter1*4; 
+alert("The perimeter is " + perimeter2);
+}
+
+else if (question1 == "rectangle") {
+lengths = prompt("What is the length?");
+width = prompt("What is the width?");
+totalength = parseInt(lengths) * 2;
+totalwidth = parseInt(width) * 2;
+perimeter3 = totalength + totalwidth;
+alert("The perimeter is " + perimeter3); }
+
+else if (question1 == "triangle") {
+base = prompt("What is the base?");
+height = prompt("What is the height?");
+}
+
+
+
+
+</script>
+
+</body>
+
+</html>

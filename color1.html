@@ -1,0 +1,43 @@
+<!doctype html>
+
+<html>
+
+<head> </head>
+
+<body>
+
+<script>
+
+var finished = false;
+var response;
+var colors = ["blue", "cyan", "gold", "gray", "green", "magenta", "orange", "red", "white", "yellow"];
+var random1 = Math.random() * 10;
+var random2 = Math.floor(random1);
+var random3 = colors[random2];
+
+
+
+	
+	
+
+while (!finished) {
+ 
+response = prompt("I am thinking of one of these colors:\n\n blue, cyan, gold, gray, green, magenta, orange, red, white, yellow\n\n What color am I thinking of?");
+if (response == random3)
+	win();
+
+	
+}
+
+
+
+
+function win() {
+		alert("You got it right! The color was " + random3 + "!");
+		finished = true; 
+		}
+</script>
+
+</body>
+
+</html>

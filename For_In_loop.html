@@ -1,0 +1,32 @@
+<!doctype html>
+
+<html>
+
+<head> </head>
+
+<body>
+
+<script>
+
+var continents = ["Australia", "Africa", "Antartica", "Eurasia", "America"];
+var response;
+var count = 0;
+
+for (var index in continents)//Essentially saying var index = [0,1,2,3,4]
+	{
+
+	response = confirm("Have you been to " + continents[index] + "?");
+	
+	if (response) count++; }
+
+
+alert("You have been to " + count + " continents!");
+
+//For-In Loops, loop through the properties of an object
+
+</script>
+
+</body>
+
+</html>
+	

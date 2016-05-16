@@ -1,0 +1,33 @@
+Typical JQuery Syntax:
+$(selector).action()
+
+$ = defines JQuery accesskey
+
+selector = to query and find HTML elements
+
+action = specify action to be performed on the elements you defined via the selector
+
+Examples: $(p).hide() - hides all p tags
+			
+		  $("mycarousel").carousel("pause") - specifiying specifically mycarousal id and pausing italic
+
+Boostrap JQuery Example:
+<script>
+	$(document).ready(function(){
+		$('[data-toggle="tooltip"]').tooltip();}
+		);
+</script>
+
+When the document is ready, run the following function:
+For everywhere there is a data-toggle=tooltip, run the tooltip function.
+
+
+JQuery Selectors:
+any HTML tag, class, id, attribute(href), or even current element: $(this).
+
+
+JQuery Events:
+User's interactions on a web page causing DOM events: mouse, keyboard, form, document, window
+
+
+Javascript based control: $('.carousel').carousel({interval:2000}); 2000ms or 2 sec

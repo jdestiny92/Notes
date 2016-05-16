@@ -1,0 +1,63 @@
+<!doctype html>
+
+<html>
+
+<head> </head>
+
+<body>
+
+<script>
+
+var finished = false;
+var response;
+var colors = ["blue", "cyan", "gold", "gray", "green", "magenta", "orange", "red", "white", "yellow"];
+var random1 = Math.random() * 10;
+var random2 = Math.floor(random1);
+var random3 = colors[random2];
+var guess = 0;
+var blue = ("blue");
+var cyan = ("cyan");
+var gold = ("gold");
+var gray = ("gray");
+var green = ("green");
+var magenta = ("magenta");
+var orange = ("orange");
+var red = ("red");
+var white = ("white");
+var yellow = ("yellow");
+
+	
+	
+
+while (!finished) {
+
+guess += 1; 
+response = prompt("I am thinking of one of these colors:\n\n blue, cyan, gold, gray, green, magenta, orange, red, white, yellow\n\n What color am I thinking of?");
+if (response == random3)
+	win();
+
+else if (response !== blue && response !== cyan && response !== gold && response !== gray && response !== green && response !== magenta & response !== orange && response !== red && response !== white && response !== yellow)
+	alert("That is not a valid answer. Please choose one of the colors!")
+	
+else if (response < random3)
+	alert("Sorry, that is incorrect. The correct answer is alphabetically higher! Try again!");
+	
+else if (response > random3)
+	alert("Sorry, that is incorrect. The correct answer is alphabetically lower! Try again!");
+	
+}
+
+
+
+
+function win() {
+		document.body.style.backgroundColor = random3;
+		number_count = parseInt(guess) - 1;
+		alert("You got it right! The color was " + random3 + "!" + " It took you " + number_count + " guesses!");
+		finished = true; 
+		}
+</script>
+
+</body>
+
+</html>

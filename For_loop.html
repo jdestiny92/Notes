@@ -1,0 +1,31 @@
+<!doctype html>
+
+<html>
+
+<head> </head>
+
+<body>
+
+<script>
+
+var continents = ["Australia", "Africa", "Antartica", "Eurasia", "America"];
+
+var response;
+var count = 0;
+
+for (var index=0; index < continents.length; index++) { 
+// This states that index increments by 1, until it breaks the rule index < continents.length
+	response = confirm("Have you been to " + continents[index] + "?");
+//Essentially every time index increments, a new question is asked, causing a loop
+
+if (response) count++;
+
+}//This is all within the for loop, last part states every time response activates, count goes up by 1
+
+alert("You have been to " + count + " continents!");
+
+</script>
+
+</body>
+
+</html>

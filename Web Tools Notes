@@ -1,0 +1,15 @@
+Web Tools Notes
+
+Tools for automation in web development:
+
+Bower: Package Manager for the Web
+
+Grunt and Gulp: Task Automation
+
+Yo: Web App Scaffolding
+
+Yeoman: Workflow designed around using Yo, Bower, and Grunt
+
+Bower: installed using NPM via command line
+used to fetch website dependencies: ex: bootstrap, font awesome, jquery?
+& to make use of these components in our website

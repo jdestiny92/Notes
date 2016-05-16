@@ -1,0 +1,29 @@
+Exhibit 1 Notes
+
+ <button id="greedy" onclick="grab()">greedy</button>
+02. <button id="verbose" onfocus="displayMsg('got focus')"
+03.     onblur="displayMsg('lost it')" onclick="displayMsg('clicked')">verbose
+04. </button>
+05.<textarea id="output" rows="8" cols="50"></textarea>
+06. <script>
+07.     function grab() { 
+08.         displayMsg("mine");
+09.         if (document.getElementById("greedy") === 
+10.             document.activeElement) 
+11.             document.getElementById("verbose").disabled = "";
+12.         else
+13.             document.getElementById("verbose").disabled = 
+14.                 "disabled";
+15.     }
+16.     function displayMsg(msg) {
+17.         document.getElementById("output").value += msg + "\n";
+18.         if (document.getElementById("verbose") === 
+19.             document.activeElement) 
+20.             document.getElementById("greedy").click();
+21.     }
+22. </script>
+
+Q: When the user clicks on the greedy button and then the verbose buttonn, what will be displayed in the textarea?
+
+A: When the greedy button is clicked, the string "mine" will be output to the textarea by line 8 calling the displayMsg function. When the verbose button is clicked, the displayMsg function will output the string "got focus." The displayMsg function will then raise a click event on line 20. This click event will in turn output "mine" to the textarea and disable the verbose button. Since the verbose button is disabled, the blur and click events will not be handled by the verbose button event handlers. No further strings will be added to the textarea. 
+

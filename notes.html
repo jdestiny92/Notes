@@ -1,0 +1,130 @@
+<!--Java Script Notes-->
+
+<!doctype html>
+
+<html>
+
+<head>
+
+</head>
+
+<body>
+
+<script>
+	//naming function, which is set to a group of javascript, then you're running it
+	
+	function messages() {
+	
+	if (confirm("Want to go to Disneyland?"))
+	document.location.href="http://park.hongkongdisneyland.com";
+	
+	var name;
+	name=prompt("What is your name?");
+
+	alert("Welcome to my page " + name + "!");
+	
+	document.write("Once again, welcome to my page!"); }
+	
+	messages();
+	
+	
+	
+	//Examples of numbers
+	
+	var number1 = 34.289;
+	var number2 = 100;
+	var BigNumber = 123e5; //12300000
+	var SmallNumber = 123e-5; //.00123
+	
+	//Boolean vs String
+	
+	var Boolean = true; //true-false statement
+	
+	var String = "true"; //text statement 
+	
+	// parseInt() converts to integer
+	// parsefloat() converts to float - number with a decimal place
+	// String() converts to string or text
+	
+	
+	//Console.log > Alert *depening on situation*
+	
+	//If you decalre a variable in a function, it can only be accessed in that function!
+	
+	// money = 99 is a local variable vs var money = 99 is a global variable
+	// Javascript gives priority to the local variable in the function
+	// If you declare a variable in a function that hasn't been declared before, it becomes a global variable
+	// However, within a function: money = 99 is a global variable, but var money = 99 is not
+	
+	//Logical Operators for Booleans
+	// Logical "And" - &&, runs true if both values are true, else it runs false
+	// Logical "Or" - ||, runs false if both values are false, else it runs true
+	// Logical "Not" - !, does opposite, so if originally true, it returns false, and vica versa
+	
+	//Arrays!
+	// An array is a continuous of set of boxes starting from 0, then +1
+	// var pets = ["Dog", "Cat", "Rabbit"];
+	//    alert(pets.join(" and "));
+	//    That results in Dog and Cat and Rabbit, it joined the elements within the array via " and "
+	// However, if nothing is stated, "," is the default seperator, for example:
+	//     alert(pets.join()); reads Dog,Cat,Rabbit
+	// To retrieve from an array: alert([2]); yields Rabbit
+	// To change whats in an array: pets[2] = "Hamster", so now its [Dog, Cat, Hamster]
+	// To add to end of array: pets.push("Hamster"), so now its [Dog, Cat, Rabbit, Hamster]
+	// To add to beginning of array: pets.unshift("Hamster") gives you [Hamster, Dog, Cat, Rabbit]
+	// To remove an element from the end of array: pets.pop(); gives you [Dog, Cat] var animal = pets.pop() gives Rabbit
+	// To remove an element from the front of array: pets.shift(); gives you [Cat, Rabbit]
+	// To merge arrays: var pets = ["Dog", "Cat", "Rabbit"] var numbers = [2,3,4], then var result = pets.concat(numbers); [Dog, Cat, Rabbit, 2, 3, 4]
+	// To generate random number: Math.random(); [0,1)
+	// Math.floor() throws away the decimal place
+	
+	
+	//Loops!!!
+	//For Loops: loop through a block of code a number of times
+	//For-In Loops: Loop through the properties of an object
+	//While Loops: loop through a block of code while a specific condition is true
+	//Do-While Loops: loop through a block of code while a certain condition is true
+	
+	//To Sort Array Alphabetically: Array.sort();
+	// Array.reverse(); swaps order, does the opposite
+	
+	//If multiple same strings within array, use Array.indexOf(target, startPosition); to locate certain ones
+	// To search backwards array: var pets=["Rabbit", "Dog", "Cat", "Rabbit", "Hamster"]; pets.lastIndexOf("Rabbit"); yields 3
+	
+	// SLICE
+	//basically you take out a part or chunk including the parameters
+	// var pets = ["Dog", "Cat", "Rabbit", "Hamster"]; pets.slice("Cat"); yields ["Cat", "Rabbit", "Hamster"];
+	
+	//Add Something To An Array
+	// Array.splice(position,0,element) ex: pets.splice(2,0,"Rabbit") Yields [] but now pets is ["Dog", "Cat", "Rabbit", "Hamster"];
+	
+	//Replace Something Anywhere in An Array
+	//For Dog, Cat, Hamster    pets.splice(1,1,"Rabbit","Fish") pets =  Dog, Rabbit, Fish, Hamster, yields cat
+	
+	//Mouse Events!!!!
+	//onlick - when the user clicks on an object
+	//onmousedown - when the user presses down on mouse but doesnt let go
+	// onmouseup - when the user lets go of the mouse button
+	// onmouseover - when mouse is moved over an object
+	// onmouseout - mouse is moved away from an object
+	
+	//Look Up Timer Events!!!!
+	//Loop Up Event Listeners!!!
+	
+	//Can Set Variables Equal to Functions, not loaded automically on webpage load, happens later!!!
+	
+	//Can Pass Functions and Return functions to each other!!!!
+	
+	//New Meta Tag: <meta http-equiv="refresh" content=1> refreshes the page after every 1 second!!!
+	
+	//Position absolute - Means our code will set the exact position of div
+	
+	
+	
+
+
+</script>
+
+</body>
+
+</html>

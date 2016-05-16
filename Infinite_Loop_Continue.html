@@ -1,0 +1,29 @@
+<!doctype html>
+
+<html>
+
+<head> </head>
+
+<body>
+
+<script>
+
+var year;
+var great_years = [];
+
+for (year=2014; year <= 2016; year++) {
+	correct = confirm("Was " + year + " great for you?")
+
+if (!correct) continue; //Essentially skip this iteration, don't do the next part, and start the loop from the beginning
+
+great_years.push(year)
+
+}
+
+alert("Your great years were: " + great_years);
+
+</script>
+
+</body>
+
+</html>

@@ -1,0 +1,85 @@
+Less and Sass Notes
+
+They are Css Pre-processors
+Sass = syntatically awesome style sheets
+Bootstrap was originally available in Less, now in Sass
+
+Stylus is another pre-processor
+
+
+Less vs Sass Variables
+
+Less:
+
+@indigo: #303f9f;
+@carousel-height: 300px;
+
+.navbar-inverse {background:@indigo;}
+
+.carousel.item {height: @carousel-height;}
+
+Sass:
+
+$indigo: #303f9f;;
+$carousel-height: 300px;
+
+.navbar-inverse {background:$indigo;}
+
+carousel.item {height: $carousel-height;}
+
+
+The Advantage of using Preprossors is Nesting!
+Nesting:
+Less example:
+
+.carousel {
+		background:@dark-indigo;
+		item {
+			height:@carousel-height;
+			img {
+				left:0;
+				min-height: @carousel-height;
+				position:absoulte;
+				top:0px;
+				}
+			}
+		}
+
+Mixins - can hold multiple CSS declarations unlike variables
+Less example:
+
+.zero-margin {margin:0px; background:@white;}
+
+.row-header {.zero-margin; padding:0px auto;}
+
+Mixins with Parameters:
+Less:
+
+.zero-margin{@pad-up-dn:0px; @pad-left-right:0px;} {
+		margin:0px; padding:@pad-up-dn @pad-left-right;
+}
+
+.row-header{.zero-margin() padding:0px auto;} - That is default value
+
+.row-content {
+		.zero-margin(50px, 0px);
+		border-bottom: 1px ridge;
+		min-height:400px;
+}
+			}
+		}
+}
+
+
+Mathematical Operations:
+Less:
+
+@carousel-height: 300px;
+.carousel.item {height:@carousel-height;}
+
+.carousel.item.item-small {height: (@carousel-height/4);}
+
+.carousel.item.item-large {height:@carousel-height*2;}
+
+
+Even allows math functions, color functions, and imports!

@@ -1,0 +1,35 @@
+Javascript Frameworks Notes
+
+Software Library = collection of implementations of behavior with a well-defined interface by which the behavior is invoked.
+This allows and emphasizes reuse of behavior
+
+Software Framework = abstraction in which software provides generic functionality that can be selectively changed by additional user written code
+Provides a universal, reusable environment for particular functionality as part of a larger software platform
+
+Library vs Framework:
+
+library - a collection of functions which are useful when writing web applications. Your code is in charge and it calls into the library when it sees fit. Ex: jQuery
+
+frameworks - a particular implementation of a web application, where your code fills in the details. The framework is in charge and it calls your when it needs something specific, app specific. Ex: durandal, ember, angular, backbone.
+"Don't call us, we'll call you!" "The framework calls your functions only when it needs to" 
+
+Imperative Programming Approach- you decide the steps to be done and you specify sequence. When you traditionally write code.
+
+Declarative Programming Approach - Specifying what needs to be accomplished. You dont care how its accomplished. Transferring how its accomplished to the framework.
+
+Angular js = declarative!!!
+
+JavaScript Framework Terms:
+	Single Page Application(Rich Internet Applications) - will go over later
+
+	Modal View Controller(MVC) - will go over later
+
+	"Scalability, Reusability, Maintainability" of Javascript Code - will go over later
+
+	Test Driven development - testing is very important
+
+
+Ember, Backbone, Angular JS Comparison:
+	Backbone is the most flexible in terms of coding, then Angular, and finally Ember is the least.	
+	In terms of easiest to learn: Backbone, Angular, then Ember
+	

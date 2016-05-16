@@ -1,0 +1,30 @@
+<!doctype html>
+
+<html>
+
+<head> </head>
+
+<body>
+
+<script>
+
+var total_amount = 0;
+
+while (true) //this forms an infininte loop
+{ this_amount = prompt("How much is this account?");
+this_amount = parseFloat(this_amount);
+
+if (this_amount>0)
+	total_amount+=this_amount;
+
+else
+	break;
+}
+
+alert("Your total savings: " + total_amount);
+
+</script>
+
+</body>
+
+</html>

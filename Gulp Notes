@@ -1,0 +1,73 @@
+Gulp Notes
+
+Task runner based on code over configuration approach
+
+Uses Node.js streams to build complex "pipelines," avoiding creation of intermediate files
+Plugins are simple and do one thing well.
+Tasks are executed with maximum concurrency possible.
+
+Node js stream is like a "file flowing in"
+
+Essentially you hook up several small plugins together to make one bigger pipeline
+
+Gulp Streams:
+
+	gulp.src(): function that takes file globs and creates a stream of objects that represent the files
+
+	pipe(): Allows the stream to be piped through a function
+
+	gulp.dest(): specifies the destination of the changes files
+
+Files -> pipe -> function1 -> pipe -> function2 -> destination
+
+Each function will change and update the incoming file data
+
+Defining JsHint:
+	gulp.task('jshint', function() {
+		gulp.src('app/scripts/**/*.js')
+		.pipe(jshint())
+		.pipe(jshint.reporter(stylish));
+	
+	});
+
+Imagemin: Defining the Image Minification Task
+	gulp.task('imagemin', function() {
+		return gulp.src('app/images/**/*')
+		.pipe(cache(imagemin({ optimizationLevel:3, progressive:true, interlaced:true})))
+		.pipe(gulp.dest('dist/images'))
+		.pipe(notify({message: 'Images task complete'}));
+	});
+
+
+Cleaning Up: Makes use of the Node module named del:
+	gulp.task:('clean', function(){
+		return del(['dist']);
+	});
+AKA - deletes distribution folder using node module, not gulp plugin
+
+
+
+Usemin:
+	gulp.task('usemin',['jshint'], function(){
+		return gulp.src('./app/menu.html')
+		.pipe(usemin({
+			css:[minifycss(),rev()],
+			js:[uglify(), rev()] }))
+		.pipe(gulp.dest('dist/'));
+	});
+
+
+Look up 'BrowserSync' node module for gulp
+
+
+Watch: - keeps a watch on the files
+	gulp.task('watch',['broswer-sync'], function(){
+		gulp.watch('{app/scripts/**/*.js,app/styles/**/*.css,app/**/*.html}',
+			['usemin']);
+
+		gulp.watch('app/images/**/*',[imagemin]);
+	});
+
+
+
+	

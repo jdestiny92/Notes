@@ -1,0 +1,95 @@
+Command Line Notes
+
+ls - lists all files in directory
+
+pwd - print working directory, ex: /home/ccuser/workspace/blog
+
+cd - change directory
+
+cd ~ = go to home directory
+
+cd .. - to move back one directory
+
+cd ../.. = move back 2 directories
+
+mkdir - make directory
+
+touch - creates a new file inside the working directory
+
+explorer "filename" - opens the file your on
+
+-a = modifies the behavior of the ls command to also list hidden files
+
+-l = lists all contents of a directory in long format/table format
+
+-t = order files and directories by the time they were last modified 
+
+ls-alt = combines effects of -a, -l, -t
+
+cp - copies files, ex: cp frida.txt lincoln.txt copies frida into lincoln!
+
+cp can also copy multiple files at a time, ex:
+	cp biopic/ray.txt biopic/notorious.txt historical/
+
+* - selects all files in working directory
+
+cp m*.txt = copies all files that start with m and end with .txt
+
+mv - moves files from one directory to another
+mv can also rename files: ex: mv batman.txt spiderman.txt
+
+rm - removes files
+rm -r = stands for recursive, delete a directory and all its child directories
+
+echo - echoes a string back to the terminal
+
+standard input(stdin) - information inputted via keyboard
+standard output(stdout) - information outputted after a process is run
+standard error(stderr) - is an error message outputted by a failed process
+
+">" - redirects standard output from left to right, overwrites files
+
+cat - outputs contents of a file
+
+">>" - redirects standard output from left to right, appends files
+
+"<" - takes standard input from file on right and inputs into left program/file
+
+| is a pipe. It takes the standard output on the left command and pipes it
+into the right command. ex: cat volcanoes.txt | wc
+
+wc - outputs the number of lines, words, and characters  
+
+Multiple | can be chained together. Ex: 
+cat volcanoes.txt | wc | cat > islands.txt
+Here the standard output of cat volcanoes.txt is piped to the wc command. The
+standard output of wc is then piped to cat. Finally, the standard output of cat is
+redirected to islands.txt
+
+sort - lists the contents in alphabetical order
+
+uniq - filters out adjacent, duplicate lines in a file. 
+A more effective way to call uniq is to call sort and then pipe the output to uniq. Thus all duplicate lines are alphabetized, made adjacent, and filtered out.
+
+grep - stands for "global regular expression print" It searches files for lines that match a pattern and returns the results. It is also case sensitive.
+"grep -i" enables the command to be case insensitive.
+ex: grep -i Mount mountains.txt = displays all words with "mount" in them
+Or you can make it search a directory and it will tell you all the locations and files that have that keyword in it.
+
+grep -R (recursive) = searches all files in a directory and outputs filenames and lines containing matched results. 
+
+grep -Rl = searches all files in a directory and outputs ONLY filenames with matched results. Vs "-R" does outputs filenames AND lines(words in file)
+
+sed - "stream editor" or basically "find an replace"
+ex: sed 's/snow/rain' forests.txt
+"S" stands for substitution which you ALWAYS use with sed
+"snow" = search string
+"rain" = replacement string
+Sed searches forests.txt for the word "snow" and replaces it with "rain"
+Keep in mind, this only replaces the first instance of "snow" on a line!
+
+Compare previous command with: sed 's/snow/rain/g' forests.txt
+"G" = global, thus it replaces all instances of "snow" with "rain" globally!!!
+
+nano hello.txt - opens a new text file via the nano text editor
+
