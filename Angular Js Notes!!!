@@ -251,6 +251,46 @@ Single Page Applications:
 		Enables mapping from the routes to handlers
 		Handlers are an object that defines: template URL, controller
 
+	$Route Parameters:
+		menu.html:
+			<div class="media-left media-middle">
+				<a ng-href="#/menu/{{dish._id}}">
+
+
+	The ng View Directive:
+		Directive that works together with $route service to include the rendered template of the current route into the main layout
+		Usage:
+			<ng-view></ng-view>
+			<div ng-view></div>
+
+
+	Limitations of ngRoute:
+		Only one view is allowed per page, no support for multiple views, no support for nested views
+		Application views tied to the route URL
+
+
+	Angular UI Router:
+		Needs to be installed via bower
+		Dependency injection into the module:
+			angular.module('confusionApp', ['ui.router'])
+
+		Router as a State Machine:
+			Instead of tracking routes, it tracks states!
+
+		ui View Directive:
+			inidicates where to include the views
+			<div ui-view="header"></div>
+			<div ui-view="content"></div>
+			<div ui-view="footer"></div>
+
+		ui-sref
+			use ui-sref="state" to indicate which state to move to when clicked
+			<a ui-sref="app"></a>
+			<a ui-sref="app.aboutus"></a>
+			<a ui-sref="app.menu"></a>
+
+			corresponding href will be generated upon compoilation
+
 
 
 

@@ -7,13 +7,17 @@
 <script>
 
 function change_color1() {
-	document.childNodes[0].childNodes[2].childNodes[1].style.color="red";}
+	document.childNodes[3].childNodes[0].style.color="red";}//This doesn't work, idk why....
 	
 function change_color2() {
 	document.getElementsByTagName("h2")[0].style.color="yellow";}
 	
 function change_color3() {
 	document.getElementById("cute_text").style.color="blue";}
+
+function change_words() {
+	document.getElementsByTagName("p")[0].innerHTML = "the text is changed";
+}
 	
 </script>
 
@@ -32,7 +36,11 @@ function change_color3() {
 	
 <input onclick = "change_color3()" type="button"
 	value = "Change using method 3">
+
+<input onclick = "change_words()" type="button" value="click me">
 </form>
+
+<p>Display the result here</p>
 
 </body>
 
