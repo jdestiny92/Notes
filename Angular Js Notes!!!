@@ -190,6 +190,70 @@ Factory vs Service = same code, just slightly different approach.
 
 
 
+Angular Templates:
+	Angular Templates are written within HTML. They contain angular specific elements and attributes
+	Dynamic View = Template + Controller + Model
+
+	Angular Elements and attributes:
+		Directives, Markup ({{ expression }}), Filter, Form controls
+
+	NgInclude Directive:
+		Directive used to fetch, compile, and include an external HTML fragment.
+		Usage:
+			<div ng-include="'menu.html'"></div>
+			<ng-include src="'menu.html'"></ng-include>
+		Creates a new scope
+
+A single container webpage can include multiple templates inside, to display different webpages
+
+
+
+
+Single Page Applications:
+	Web application or website that fits into a single page. 
+	No need to reload the entire page.
+	UX like a desktop/native application
+	Most resources are retrieved with a single page load
+	Redraw parts of the page when needed without requiring a full server roundtrip
+
+	Role of Server vs Client:
+		Server:
+			serves up data using REST API
+			Supplies the static HTML pages, Angular templates and resources
+
+		Rendering of view is completely on client side.
+
+
+	Deep Linking:
+		Hyperlink that specifies a link to a searchable or indexed piece of web content
+		Ex: http://www.conFusion.food/index.html#/menu/0  -  everything after hastag is not reloaded
+		Any change to the hashtag portion of url does not cause a page reload
+
+
+	The $location Service:
+		Used to watch and change the current URL
+
+	Routing:
+		Mapping the path portion of a URL to a handler for that particular route
+		Route is the hash portion of the URL in the context of single page applications
+		Ex: http://www.conFusion.food/index.html#/menu/0
+
+
+	Angular Ng Route Module:
+		Manages the interaction between the $location service and the rendered view
+		Need to install via bower
+		Dependency injection into the module:
+			angular.module('confusion.App',['ngRoute'])
+
+
+	The $route Provider:
+		Angular Provider
+		Enables mapping from the routes to handlers
+		Handlers are an object that defines: template URL, controller
+
+
+
+
 
 	
 
