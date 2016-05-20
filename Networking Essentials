@@ -1,0 +1,31 @@
+Networking Essentials
+
+HTTP(Hyper Text Transfer Protocol) is a protocol that allows you to do client-server communication
+
+REST API = Representational Transfer API
+
+URL = Uniform Resource Locator
+
+JSON = Javascript Object Notation
+
+XML = Extended Markup Language
+
+SOAP = used on top of HTTP for extra protocol communication
+
+Network operations cause unexpected delays
+
+You need to write applications recognizing the asynchronous nature of communication
+- Data is not instantaneously available
+
+HTTP:
+	Allows retrieving interlinked text documents(hypertext)
+	- World Wide Web
+
+	GET = requesting for a particular resource to be delivered via the server
+
+	If the resource we request is on the web server, an HTTP response message will be sent containing a message
+	It shows a Code, ex: 200,201,etc... which corresponds to a meaning, ex: OK, Created....
+
+
+	XML = eXtensible Markup Language
+
