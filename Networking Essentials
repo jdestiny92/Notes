@@ -29,3 +29,13 @@ HTTP:
 
 	XML = eXtensible Markup Language
 
+HTTP Response:
+	Server may send back data in a specific 
+
+
+Javascript Object Notation (JSON):
+	lightweight data interchange format
+	Language independent
+	self-describing and easy to understand
+	- uses name value pairs
+

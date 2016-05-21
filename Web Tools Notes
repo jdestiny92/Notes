@@ -8,8 +8,31 @@ Grunt and Gulp: Task Automation
 
 Yo: Web App Scaffolding
 
-Yeoman: Workflow designed around using Yo, Bower, and Grunt
+Yeoman: Workflow designed around using Yo, Bower, and Gulp
 
 Bower: installed using NPM via command line
 used to fetch website dependencies: ex: bootstrap, font awesome, jquery?
 & to make use of these components in our website
+
+Yo: Need to quickly scaffold out new projects
+- hand crafting all the project folder hierarchy
+- assembling together all the tools
+- designing the workflow
+
+Yo scaffolding tool takes care of:
+- scaffolding out your next application
+generators to help you scaffold out your application
+robust opinionated client-side stack
+
+- setting up all the tools for the workflow
+leverages the succesful open-source tools being used in the community
+
+
+Yeoman Workflow:
+create a new webapp -> handle dependencies(bower search, bower install) -> preview,test,build(gulp)
+
+
+Scaffolding out a Project:
+- Create a project folder/directory
+- Go to the project folder/directory and type: yo angular (command prompt)
+

@@ -294,6 +294,33 @@ Single Page Applications:
 
 
 
+Angular $http:
+	$http: core angular service to communicate with servers using the HTTP protocol via the browser's
+	- XMLHttpRequest
+	- JSONP
+
+	Operation is asychronous in nature = when you issue a request, you don't get an immediate response
+
+	Promise(Angular Service):
+		- used whenever you want to perform operations asychronously
+		- when asychrnous operation is completed, it will come back and tell you whats happened
+		$http service -> Promise -> States pending: fulfilled -> success OR rejected -> error
+
+
+	Ng If Directive:
+		can be used to add/remove a portion of the DOM tree based on an expression
+		ex: 
+			<div class="col-xs-12" ng-if="!showMenu">
+				<h3>{{message}}</h3>
+			</div>
+
+		
+
+
+
+
+
+
 
 	
 
