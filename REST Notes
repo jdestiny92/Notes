@@ -1,0 +1,103 @@
+Web Services:
+	A system designed to support interoperability of systems connected over a network
+	- service oriented architecture (SOA)
+	- A standardized way of integrating web-based applications using open standards operating over the internet
+
+	Two common approaches used in practice:
+	SOAP (Simple Object Access Protocol) based Services
+	- uses WSDL (Web Services Description Language)
+	- XML based
+
+	Rest (Representational State Transfer)
+	- Use Web Standards 
+	- Exchange of data using either XML or JSON
+	- Simpler compared to SOAP, WSDL, etc.
+
+
+REST:
+	A style of software architecture for distributed hypermedia systems such as the World Wide Web. 
+	A collection of network architecture principles which outline how resources are defined and addressed.
+
+	Four Basic Design Principles:
+	- Use HTTP methods explicity
+	- Be stateless
+	- Expose directory structure-like URIs (Uniform Resource Indicator)
+	- Transfer both XML, Javascript Object Notation (JSON), or both
+
+
+	Rest Concepts:
+		Nouns = resources
+		Verbs = specify what should be done, ex: GET, PUT, POST, DELETE
+		Representations = XML, JSON
+
+		Resources:
+			The key abstraction of information in REST is a resource
+			A resource is a conceptual mapping to a set of entities. 
+			Any infomration that can be named can be a resource: 
+				- a document or image
+				- a temporal service ('today's weather in hong kong')
+				- a collection of other resources
+				- a non virtual object (person)
+
+
+		Verbs:
+			Represent the actions to be performed on resources
+			- Corresponding to the CRUD operations
+			- HTTP GET = READ
+			- HTTP POST = CREATE
+			- HTTP PUT = UPDATE
+			- HTTP DELETE = DELETE
+
+		HTTP GET:
+			Used by clients to request for information
+			Issuing a GET request transfers the data from the server to the client in some representation (XML, JSON)
+
+		HTTP POST:
+			Creates a resource
+
+		HTTP PUT:
+			Updates a resource
+
+		HTTP DELETE:
+			removes the resource indentified by the URIs
+
+
+		Representations:
+			How data is represented or returned to the client for presentation
+			Two main formats:
+				- JSON
+				- XML
+			It is common to have multiple representations of the same data
+			- Client can request the data in a specific format if supported
+
+
+		Stateless Server:
+			Server side should not track the client side:
+			- Every request is a new request from the client
+
+			Client side should tracks its on state:
+			- ex: using cookies, client side database
+			- Every request must include sufficient information for server to serve up the requested information
+			- Clien side MVC setup
+
+
+
+Client Server Service:
+	Angular ngResource:
+		the ngResource module provides a higher level abstraction than $http for interacting with a RESTful API server
+		Not part of angular core
+
+	Angular $resource service:
+		convenient wrapper around a REST API to perform CRUD opeartions
+		- no need to deal with $http directly, higher level abstraction
+
+		Usage:
+			$resource(url, [paramDefaults], [actions], options);
+
+		Example: $resource(baseURL+"dishes/:id", null, {'update':{method:'PUT'}});
+
+		Resource methods: .query(), .get(), .save(), .remove(), .delete()
+
+		*Can also make custom Put requests
+
+		
