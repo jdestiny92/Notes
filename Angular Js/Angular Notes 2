@@ -1,0 +1,44 @@
+In app.js, we created a new module named 'myApp'. A module contains the different components of an AngularJS app.
+
+In index.html we added <body ng-app="myApp">. The ng-app is called a directive. It tells AngularJS that the myApp 
+module will live within the <body> element, termed the application's scope. In other words, we used the ng-app directive 
+to define the application scope.
+
+In MainController.js we created a new controller named MainController. A controller manages the app's data. Here we use 
+the property title to store a string, and attach it to $scope.
+
+Then, in index.html, we added <div class="main" ng-controller="MainController">. Like ng-app, ng-controller is a directive that defines the controller scope. This means that properties attached to $scope in MainController become available to use within <div class="main">.
+
+Inside <div class="main"> we accessed $scope.title using {{ title }}. This is called an expression. Expressions are used to 
+display values on the page. The value of title showed up when we viewed the app in the browser.
+
+Both the controller MainController and the view "index.html" have access to $scope. This means we can use $scope to communicate between the controller and the view. 
+
+Likewise, any new properties attached to $scope will become available to use in the view.
+
+In the controller, you used an object to group together related data about a product. Then in the view, you used dot notation to display the values.
+
+AngularJS gets the value of product.price.
+It sends this number into the currency filter. The pipe symbol (|) takes the output on the left and "pipes" it to the right.
+The filter outputs a formatted currency with the dollar sign and the correct decimal places.
+In this way, filters help to separate the content in the controller from its presentation in the view.
+
+
+Angular Filters:
+	currency - Format a number to a currency format.
+	date - Format a date to a specified format.
+	filter - Select a subset of items from an array.
+ 	json - Format an object to a JSON string.
+	limitTo - Limits an array/string, into a specified number of elements/characters.
+	lowercase - Format a string to lower case.
+	number - Format a number to a string.
+	orderBy - Orders an array by an expression.
+	uppercase - Format a string to upper case.
+
+A module contains the different components of an AngularJS app
+A controller manages the app's data
+An expression displays values on the page
+A filter formats the value of an expression
+
+
+In the controller, we used products to store an array containing two objects. Then in the view, we added <div ng-repeat="product in products">. Like ng-app and ng-controller, the ng-repeat is a directive. It loops through an array and displays each element. Here, the ng-repeat repeats all the HTML inside <div class="col-md-6"> for each element in the products array. In this way, ng-repeat shows both products in the $scope.products array. Instead of writing the same HTML twice as before, we just use ng-repeat to generate the HTML twice.
