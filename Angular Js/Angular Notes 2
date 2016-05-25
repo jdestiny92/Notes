@@ -42,3 +42,22 @@ A filter formats the value of an expression
 
 
 In the controller, we used products to store an array containing two objects. Then in the view, we added <div ng-repeat="product in products">. Like ng-app and ng-controller, the ng-repeat is a directive. It loops through an array and displays each element. Here, the ng-repeat repeats all the HTML inside <div class="col-md-6"> for each element in the products array. In this way, ng-repeat shows both products in the $scope.products array. Instead of writing the same HTML twice as before, we just use ng-repeat to generate the HTML twice.
+
+The ng-src is a directive that sets the <img> element's src to a property in the controller.
+
+Directives bind behavior to HTML elements. When the app runs, AngularJS walks through each HTML element looking for directives. When it finds one, AngularJS triggers that behavior (like attaching a scope or looping through an array).
+
+Great! Each time you click on the number of likes, the number goes up. How does it work?
+The ng-click is a directive. When <p class="likes"> is clicked, ng-click tells AngularJS to run the plusOne() function in the controller.
+The plusOne() function gets the index of the product that was clicked, and then adds one to that product's likes property.
+Notice that the plusOne() doesn't interact with the view at all; it just updates the controller. 
+Any change made to the controller shows up in the view.
+
+Outline So Far:
+	1. A user visits the AngularJS app.
+	2. The view presents the app's data through the use of expressions, filters, and directives. Directives bind new behavior to HTML elements.
+	3. A user clicks an element in the view. If the element has a directive, AngularJS runs the function.
+	4. The function in the controller updates the state of the data.
+	5. The view automatically changes and displays the updated data. The page doesn't need to reload at any point.
+
+	
