@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>The Hangman Game</title>
+    <script src="https://code.jquery.com/jquery-2.2.3.js" integrity="sha256-laXWtGydpwqJ8JA+X9x2miwmaiKhn8tVmOVEigRNtP4=" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+
+</head>
+
+
+<body>
+
+<!-- This is where the code will go that we created. -->
+
+<div class="container">
+        <!-- Jumbotron with Title -->
+        <div class="jumbotron">
+          <div id="movieImg"></div>
+            <h1 class="text-center"><strong>The Hangman Game</strong></h1>
+            
+            <p class="text-center">PRESS ANY KEY TO GET STARTED! Guess Three Movie Names</p>
+
+            <p class="text-center"> Wins    </br> <span id="winNumber" > 0 </span></p>
+
+          <div class="text-center">CURRENT WORD</br>
+          <P class="text-center" id= "currentWord"> 
+
+  
+      </P>
+      </div>
+    <p class="text-center"> Losses: &nbsp; <span id="lossNumber">  0 </span></p>
+
+    <p class="text-center"> NUMBER OF GUESSES REMAINING:    </br> <span id="leftNumber">  </span></p>
+
+    <p class="text-center"
+    > LETTERS ALREADY GUESSED:  </br> <span id="guessInput"> </span></p>
+
+
+        </div>
+ </div>
+
+
+<script type="text/javascript">
+
+var empty = ["_","_","_","_","_","_"];
+
+var computerAnswer = ["m","a","t","r","i","x"];
+
+var check = [];
+
+var wins = 0;
+var losses = 0;
+var guessesLeft = 12;
+var i = 0;
+
+$('#currentWord').html(empty);
+$('#leftNumber').html(guessesLeft);
+
+document.onkeyup = function(event) {
+    
+var keypress = String.fromCharCode(event.keyCode).toLowerCase();
+
+if(check.indexOf(keypress) >= 0){
+    console.log('key already pressed');
+}
+
+
+if (keypress=="m" || keypress=="a" || keypress=="t" || keypress=="r" || keypress=="i" || keypress=="x"){
+       empty[computerAnswer.indexOf(keypress)] = keypress;
+       $('#currentWord').html(empty);
+       i += 1;
+       check.append(keypress);
+    }
+
+else {
+
+$('#guessInput').append(keypress);
+guessesLeft -= 1;
+$('#leftNumber').html(guessesLeft);
+
+
+};
+
+if(i==6){
+alert('you win!');
+i = 0;
+wins++;
+ $('#winNumber').html(wins);
+guessesLeft = 12;
+ $('#currentWord').html('');
+ $('#leftNumber').html(guessesLeft);
+ $('#guessInput').empty();
+
+}; 
+
+if (guessesLeft == 0){
+   guessesLeft = 12;
+   $('#guessInput').html('');
+   losses++;
+   $('#lossNumber').html(losses);
+   }
+   
+   
+
+};
+</script>
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+ </body>
+ </html>
