@@ -1,0 +1,44 @@
+"THIS" Notes
+
+By itself, "this" refers to the Window object
+
+"this" always refers to an object
+
+global scope of 'this' always refers to the window
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+<script type="text/javascript">
+	
+var person = {
+	first_name: 'sally',
+	last_name: 'smith',
+	showName: function(){
+		console.log(this);
+	}
+}
+
+person.showName();
+
+function hi(){
+	console.log(this);
+}
+
+hi();
+
+
+var person = {
+	name: 'matt',
+	sayHi : function(){
+		hi();
+	}
+}
+
+person.sayHi();
+</script>
+</body>
+</html>

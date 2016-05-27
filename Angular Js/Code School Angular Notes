@@ -1,0 +1,12 @@
+Code School Angular Notes
+
+A Directive is a marker on a HTML tag that tells Angular to run or reference some Javascript code.
+
+
+Modules:
+	- Where we write pieces of our Angular application
+	- Makes our code more maintainable, testable, and readable
+	- We can say "this module depends on these two modules"
+	- Set dependencies
+
+
