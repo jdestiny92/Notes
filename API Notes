@@ -1,0 +1,31 @@
+API Notes
+
+Most API's in JSON format
+
+Can mash many API's together
+
+Example from omdbapi.com:
+
+	?t=Frozen&y=&plot=short&r=json
+
+	? starts it
+
+	t = movie title to search for
+
+	t=Frozen
+
+
+
+
+Parse = taking a string and making it into an object
+
+
+
+Two type of server requests GET and POST
+
+GET - same thing as going to an url and making a request to get info to load a page
+
+
+
+AJAX:
+	

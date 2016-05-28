@@ -7,6 +7,30 @@ Modules:
 	- Where we write pieces of our Angular application
 	- Makes our code more maintainable, testable, and readable
 	- We can say "this module depends on these two modules"
-	- Set dependencies
+	- Set dependencies and also define
 
 
+Example:
+	var app = angular.module('store', []);
+
+	store -> application name
+	[] -> Dependencies and other libraries we might need
+
+
+Expressions:
+	Allow you to insert dynamic values into your HTML
+
+	Example:
+		<p>I am {{4 + 6}}</p> Renders as 'I am 10'
+
+
+
+Controllers:
+	are where we define our apps behavior by defining functions and values
+
+	Example of an object:
+		var gem = {
+			name: 'Docahedron',
+			price: 2.95, 
+			description: '....'
+		}
