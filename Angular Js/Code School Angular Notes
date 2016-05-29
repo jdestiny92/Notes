@@ -34,3 +34,78 @@ Controllers:
 			price: 2.95, 
 			description: '....'
 		}
+
+
+	*Wrapping your Javascript in a closure is a good habit*
+		
+		(function () {
+			var app = angular.module('store', []);
+
+			app.controller('StoreController', function(){
+
+				this.product = gem;
+			});
+				var gem = {
+							name: 'Docahedron',
+							price: 2.95, 
+							description: '....'
+						}
+		})();
+
+A controller only exists in where it is declared
+
+If you want to call name in html, it would be: StorController.product.name
+but if you set up the ng-controller StoreController as store, then it would just be store.product.name
+
+
+
+Add a new key-name pair:
+	var gem = {
+							name: 'Docahedron',
+							price: 2.95, 
+							description: '....',
+							canPurchase: false
+						}
+
+	Then you can make a button in the html:
+		<button ng-show="store.product.canPurchase">Add to Cart</button>
+
+	*This will only show the button when the given field is 'true'*
+
+
+	This opposite of this would be using ng-Hide!
+
+	First, you would make a key-name pair in gem, 'soldOut: true'
+	Thus <div ng-hide="store.product.soldOut"> Will hide the div when soldOut is true
+
+
+	
+	However, we don't just want 1 gem, so we do this:
+
+	this.products = gems;
+
+	var gems = [
+		{
+			name:'Docahedron',
+			price:2.95,
+			description:'...',
+			canPurchase:true,
+		},
+
+		{
+			name:'Pentagonal Gem',
+			price:5.95,
+			description:'...',
+			canPurchase:false,
+		}
+	];
+
+	*Very important! Now if you want to repeat these, you don't need to list them individually!
+	You can do: <div ng-repeat="product in store.products"
+
+
+	Recap Vocab:
+		Directives - HTML annotations that trigger Javascript behaviors
+		Modules - Where our application components live
+		Controllers - Where we add application behavior
+		Expressions - How values get displayed within the page 
