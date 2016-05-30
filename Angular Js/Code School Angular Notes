@@ -128,7 +128,43 @@ Add a new key-name pair:
 
 		{{'1388123412323' | date:'MM/dd/yyyy @ h:ma'}} yields 12/27/2013 @ 12:50AM
 
+		uppercase & lowercase filters
 
 		'Limit to Filter':
+			<li ng-repeat="product in store.products | limitTo:3">
+				Limits the amount of repeats
+
+		'OrderBy Filer'
+			<li ng-repeat="product in store.products | orderBy:'-price'">
 			
+
+
+	Adding an Image Array to our Product Array:
+		var gems = [
+			
+			{name: 'Docahedron Gem',
+			 description: '...',
+			 images: [
+			 {
+			 	full: 'docahedron-01-full.jpg',
+			 	thumb: 'docahedron-01-thumb.jpg'
+			 },
+
+			 {
+			 	full:"dodehedron-02-full.jpg",
+			 	......
+			 }
+
+
+
+			 }]}
+
+		];
+
+	*Very important: when loading pictures from angular array, you ng-src, not img-src!!!*
+
+
+	
+
+
 
