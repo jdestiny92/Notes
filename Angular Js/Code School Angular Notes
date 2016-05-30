@@ -82,7 +82,11 @@ Add a new key-name pair:
 	
 	However, we don't just want 1 gem, so we do this:
 
-	this.products = gems;
+
+	app.controller('StoreController', function(){
+		this.products = gems;
+	});
+	
 
 	var gems = [
 		{
@@ -108,4 +112,23 @@ Add a new key-name pair:
 		Directives - HTML annotations that trigger Javascript behaviors
 		Modules - Where our application components live
 		Controllers - Where we add application behavior
-		Expressions - How values get displayed within the page 
+		Expressions - How values get displayed within the page
+		ng-app = attach the Module to the page
+		ng-controller = how to attach a controller function to the page
+		ng-show, ng-hide = based on an expression
+		ng-repeat = a section for each item in an array (use JSON here)
+
+
+	Currency filter:
+		Ex: {{product.price | currency}} - means, take the output of the result of the first expression
+		and 'pipe' it into the second expression
+
+	General Filter Recipe:
+		{{ data | filter:options }}
+
+		{{'1388123412323' | date:'MM/dd/yyyy @ h:ma'}} yields 12/27/2013 @ 12:50AM
+
+
+		'Limit to Filter':
+			
+
