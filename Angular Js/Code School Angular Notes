@@ -164,7 +164,42 @@ Add a new key-name pair:
 	*Very important: when loading pictures from angular array, you ng-src, not img-src!!!*
 
 
-	
+
+		Angular Tabs:
+			-You can bootstrap to set up tabs, ex: <ul class="nav nav-pills">
+			-You then can add <ng-click> directive to each <li>, ex: <li><a href ng-click="tab = 1">Description</a></li>
+			-Then if you write {{tab}} as an expression, you can dynamically change whats on the screen simply by clicking!
+
+
+	*Very important: Expressions define a 2 way Data Binding, this means Expressions are re-evaluated when a property changes
+
+	So! You can set tab = some number; then make the panels below this code, the information you want to show indiviudally
+	Then set each individual panel with the directive <ng show="tab===certainNumber"; Thus clicking on individual tabs
+	will show the correspoding panel of information and will reset after every click!
+
+
+
+	Ng-Init:
+		- Allows us to evaluate an expression in the current scope.
+
+		So for the previous example, because when you first load the page nothing happens, you can use Ng-Init!
+		You would write: <section ng-init="tab = 1"> Thus this will trigger the show directives, showing the first
+		panel automatically, however still keeping the overall functionality and allowing for different panels to be
+		clicked and shown.
+
+
+	Ng-Class:
+		- Angulars version of setting a class
+
+		In regards to the ongoing example, wouldn't it be nice if the tab you clicked would show up as active each time?
+		Taking advantage that bootstrap has that ability by setting a class to active, you would then use 'Ng-Class'
+
+		Ex: <li ng-class="{ active:tab === 1 }"> This translates to: when tab === 1, make this class active!
+		Thus you can change this number, 2,3,etc for as many tabs as you have and each will become active when clicked!
+
+
+	*Now that 
+
 
 
 

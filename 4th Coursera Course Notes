@@ -38,3 +38,44 @@ Hybrid Apps Work Best:
 
 SDK = Software Development Kit
 
+
+
+
+Ionic and Angular Js:
+
+An ionic app is basically an Angular single page application
+- all the angular features are accesible within Ionic
+
+Ionic uses Angular-UI Router for developing SPA
+
+Ionic adds its own services and directives that can be used in the design of your app
+- Ionic's own services like $loading, $actionSheet, etc.
+- Ionic directives like <ion-view>, <ion-content>, <ion-list>, <ion-tabs>, etc.
+- <ion-nav-view> is used to render your templates
+- Ionic keeps track of your navigation history
+
+Ionic Navigation
+- <ion-nav-bar> for creating a top/header bar that will automatically update as the application state changes
+- <ion-nav-back-button> adds back button to the NavBar
+- <ion-side-menus> to add a container for side menu and main content
+- <ion-side-menu-content> a container to hold the main content
+- <ion-side-menu> a container for the side menu
+
+Ionic Templates
+- <ion-view> container for view content, navigational and header bar
+	*Takes an optional view-title attribute that it makes available to the <ion-nav-view>
+- <ion-content> provides an easy to use content area. Can use Ionic's custom scroll view
+
+
+
+
+Ionic Css Components:
+	Ionic's CSS classes can be used independent of the Ionic Angular directives
+
+	Ionic use SASS to define the CSS classes
+
+Use "item-text-wrap" as part of a div class to completely wrap all text onto the screen
+
+
+Wrap everything in a Ionic 'Card Class'
+	makes everything into a nice and organized element
