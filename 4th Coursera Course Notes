@@ -1,0 +1,40 @@
+4th Coursera Course Notes
+
+Web content(Html, css, javascript) goes to either a browser or an App with WebView
+
+Web applications for mobile can be developed in two ways:
+	1. Fully client side application installed on the device
+	2. Mobile web application developed using web standards and accessed through a web browser
+
+We'll be doing the hybrid app developent approach!
+
+Hybrid App Development Approaches:
+	1. WebView App
+	- The HTML, CSS, and Javascript code base runs in an internal browser (called WebView) that is 
+	wrapped in a native app. Some native APIs are exposed to JavaScript through this wrapper
+	- Examples: Cordova/Phonegap, Trigger.io
+
+	2. Compiled hybrid app
+	- The code is written in one language(such as #C or Javascript) and gets compiled to native code
+	for each supported platform. The result is a native app for each platform, but less freedom during development.
+	- Examples: Appcelerator Titanium, Xamarin, Embarcadero FireMonkey
+
+
+Advantages of Hybrid Approach:
+	- Developer can use existing web skills
+	- One code base for multiple platforms
+	- Reduced development time and cost
+	- Easily design for various form factors (including tablets) using responsive web design
+	- Access to some device and operating system features
+	- Advanced offline capabilities
+	- Increased visibility because the app can be distributed natively(via app stores) & to mobile browsers(via search engines)
+
+Hybrid Apps Work Best:
+	For content driven apps
+		- Business and Productivity
+		- Enterprise
+		- Media
+
+
+SDK = Software Development Kit
+
