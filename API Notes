@@ -28,4 +28,31 @@ GET - same thing as going to an url and making a request to get info to load a p
 
 
 AJAX:
-	
+
+
+
+/* More Notes */
+
+
+What is an API?
+- offers a set of pre-defined routines, code snippets, and tools for building software applications
+-A contract between one piece of software and another piece of software.
+- APIs are often the bridge between different components
+- not only receiving data, but also giving data
+- data needs to be sent back and forth in the form of JSON
+
+JSON is a lightweight data-interchange format used to correlate key with values
+- in JSON you HAVE to use double quotes for both 'key' and 'value'
+
+What jquery method do we use to retrieve data from a URL database?(Very Important!)
+- $.ajax({url: queryURL, method: 'GET'}) - this saves the info
+	.done(function(response){
+		console.log(response);			 - this shows the info
+	});
+
+All API's are in apps, but apps are not API's!!!
+Just the process of sending/retrieving data?
+
+
+Sometimes you need to add an API key, and sign up for one!
+

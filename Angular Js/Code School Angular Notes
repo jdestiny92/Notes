@@ -161,7 +161,7 @@ Add a new key-name pair:
 
 		];
 
-	*Very important: when loading pictures from angular array, you ng-src, not img-src!!!*
+	*Very important: when loading pictures from angular array, use ng-src, not img-src!!!*
 
 
 
@@ -198,7 +198,28 @@ Add a new key-name pair:
 		Thus you can change this number, 2,3,etc for as many tabs as you have and each will become active when clicked!
 
 
-	*Now that 
+	*Now that you have all this code, you realize its messy. Too much in-line hard coding. So the next step would be to
+	move everything to a controller. You make a new controller called 'PanelController as panel'
+	1.Then in app.js, define panel controller: app.controller('PanelController', function() {});
+	2.Now you can remove ng-init for ng-controller. And inside the controller write: this.tab = 1;
+	This activates the default description the same way ng-init did.
+	3. app.controller("PanelController", function(){
+		this.tab = 1;
+
+		this.selectTab = function(setTab) {
+			this.tab = setTab;
+		};
+
+		this.isSelected = function(checkTab){
+			return this.tab === checkTab;
+		};
+	});
+
+	4. ng-class="{ active: panel.isSelected(1) or (2) or (3) }"
+
+	5. ng-click="panel.selectTabe(1) or (2) or (3)"
+
+	6. Set the panel div class to ng-show="panel.isSelected(1)"
 
 
 
