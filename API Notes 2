@@ -1,0 +1,11 @@
+API Notes
+
+Default is POST, so you use 'return false' to override it
+
+Ex: <a href="http://www.amazon.com" target="_blank" onclick="return false;" >TEST RETURN FALSE</a>
+
+You can create your own data attributes for HTML!!!
+
+Ex: catImag.attr('data-id', imageOther)
+
+prepend goes before, just the opposite of append

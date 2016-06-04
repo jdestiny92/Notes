@@ -222,5 +222,9 @@ Add a new key-name pair:
 	6. Set the panel div class to ng-show="panel.isSelected(1)"
 
 
+Ng-Model(2 Way Binding) Notes:
 
+	Checkbox - sets value to either true or false
+	Radio Button - sets the value based on what is selected
+	
 
