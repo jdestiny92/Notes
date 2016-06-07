@@ -79,3 +79,18 @@ Use "item-text-wrap" as part of a div class to completely wrap all text onto the
 
 Wrap everything in a Ionic 'Card Class'
 	makes everything into a nice and organized element
+
+ionList <ion-list> directives provide various interaction modes such as swipe to edit, drag to reorder, and deleting items
+	Basic usage: <ion-list>
+					<ion-item>....</ion-item>
+				 <ion-list>
+
+
+Ionic Grid:
+	you can use percentages!
+	OR if you just right col, it takes up as much space as possible, ex: col, col, col, each will take a third of page
+	OR col-x, where x is a percentage, or col-offset-x, where x is a percentage
+	Also possible vertical alignment: col-top, col-center, col-bottom
+	Additionally, you can do row-top, row-center, row-bottom, and it will apply to every column in the row
+
+	
