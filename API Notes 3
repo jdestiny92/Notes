@@ -1,0 +1,28 @@
+API Notes 3
+
+Data Persistence:
+
+	1. Client Side - Storing directly on your computer(local browser)
+		- local storage
+		- session storage
+		- cookies
+		- cache storage
+
+	2. Server Side - on a server, in a data base
+
+
+	Look up:
+		localstorage.clear()
+		localStorage.setItem()
+		localStorage.getItem()
+
+		all browsers use cookies, not all browsers use localStorage or sessionStorage
+
+		You can also set expiration date on cookies
+
+
+		JSON.stringify() - converts object to a string
+
+		JSON.parse() - converts string to an object
+
+		
