@@ -20,7 +20,6 @@ Data Persistence:
 
 		You can also set expiration date on cookies
 
-
 		JSON.stringify() - converts object to a string
 
 		JSON.parse() - converts string to an object
