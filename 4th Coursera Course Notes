@@ -93,4 +93,68 @@ Ionic Grid:
 	Also possible vertical alignment: col-top, col-center, col-bottom
 	Additionally, you can do row-top, row-center, row-bottom, and it will apply to every column in the row
 
+	So when using Ionic, here is the setup:
 	
+
+Ionic Forms:
+	For input items, labels can be specified using placeholder, inline or stacked or floating labels
+	Different components:
+		- input icons
+		- header inputs
+		- toggle
+		- checkbox
+		- radio button list
+		- range = sliding bar value selector
+
+
+Ionic Modal:
+	- Ionic modal is a service provided by ionic which you must inject into your controller
+
+
+
+Ionic Lists:
+	Ionic provides enhanced lists with advanced features:	
+	 - delete button, reorder button, option button
+	 - ionic provides special directives 'ionList' & 'ionItem' for supporting these features
+
+	 'Collection Repeat':
+	 - Allows app to show huge list of items performantly
+	 	* Renders into DOM only as many items as are currently visible
+	 - Use in place of ng-repeat!
+	 - Only displays the maximum amount of items your screen can handle, not every single item!!!
+
+	 Angular Custom Filters
+	 - Custom filter function can be written as a factory
+	 * Returns a filter function that takes input as the first argument,
+	 and additional filter arguments as additional arguments
+
+	 Custom Filter Are Possible.....
+
+
+
+
+Popup, Popover, Action Sheet, Loading:
+	- All of these involve overlaying content on top of the screen
+	- Provide a means of showing and hiding
+	- Allow for user interaction and handle it
+	- Content may be described using a template
+	- DI as a service: $ionicPopup, $ionicPopover
+	- Supported in javascript
+
+	Ex: $ionicPopup.confirm({
+		Key: value 'pairs'
+	})
+
+	Ex: $ionicLoading.show({
+		template: '<ion-spinner>/</ion-spinner>Loading....'
+	})
+
+	Gestures:
+		- Many gestures supported on various elements:
+			* on-hold, on-tap, on-double-tap, on-touch, on-release
+			* on-drag-up, on-drag-right
+			* on-swipe-left, on-swipe-right
+
+		- Given as attributes to elements
+			* invoke a function to handle gesture:
+				<ion-item...on-swipe-left="deleteFavorite(dish.id)">
