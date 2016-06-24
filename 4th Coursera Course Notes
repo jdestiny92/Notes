@@ -158,3 +158,29 @@ Popup, Popover, Action Sheet, Loading:
 		- Given as attributes to elements
 			* invoke a function to handle gesture:
 				<ion-item...on-swipe-left="deleteFavorite(dish.id)">
+
+*Look up 'Publish-subscribe pattern' for software architecture
+
+$scope.$emit - fires a message (event) to parent scope
+
+$scope.$broadcast - fires a message (event) down scope to children scope
+
+Root scope is the parent of ALL the scopes!!
+
+$rootScope.$emit - obviously doesn't have any parents, so fires to all $rootScope.$on listeners
+
+$rootScope.$broadcast - sends to all its children
+
+
+Ui-Router fires events:
+	- $stateChangeStart : fires when the transition begins
+	- $stateNotFound : fires when state cannot be found
+	- $stateChangeSuccess : fires once state change is successful
+	- $stateChangeError : fires when error occurs during transition
+
+
+HTML5 Local Storage:
+	Browsers support local storage using a simple key-value pair manner called localStorage
+	- Examle: window.localStorage['key'] = 'value';
+	- Only store strings
+	- How to store Javascritp objects? = convert to JSON

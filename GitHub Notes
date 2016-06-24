@@ -1,0 +1,21 @@
+GitHub Notes
+
+Got to settings, then collaborators, then add collaborator
+
+Can go to 'issues' then create new issue
+
+If you're the collaborator:
+	go to repo, clone the project onto your computer
+
+	Click on issues
+
+	Solve issue: 'create html page'
+	In git bash: git checkout -b 'branchname'
+	Then add, commit, git push origin 'branchname' instead of master
+
+	Pull request = merging your branch into master branch
+
+	Collaboraters can, though, just push to master, although its better practice
+	to just work on your branch because there could be conflicts
+
+	'git branch' shows all branches on your local machine
