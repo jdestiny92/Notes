@@ -1,0 +1,25 @@
+Backend Notes
+
+Examples of backend code:
+	- api that parse URL parameters to provide selective JSONs
+	- firebase methods that provide a timestamp back to users
+	- clicking an invoice that provides a pdf report
+	- image processesing software that takes an image applies a filter, then saves the new version
+	- google providing results relevant to your searches on other sites
+
+What is a server?
+	- A web server takes a client request and gives something back. (Request & Response)
+	- Server could be software or hardware
+
+
+Intro to Node Js!
+	- Node js is an open source, cross platform javascript runtime environment designed to be run outside of browsers
+	- It is a general utility that can be used for a variety of purposes including asset compilation, scripting,
+	  monitoring, and most notably as the basis for web servers
+	- Can be used to make applications as well
+
+Why Use NodeJS as a Server?
+	- It re-uses Javascript = meaning a front end javascript developer can also build an entire server themselves
+	- Its easily extendable = numerous plugins exist to expand the capabilities of node
+	- Fast Implementation = which allows for the creation of an entire working server with only a few lines of code
+	- Single Threaded Asycncronous Model = meaning the server handles all requests using a single thread through event based	  callbacks. No limit on requests. No bottleneck.
