@@ -20,6 +20,40 @@ Intro to Node Js!
 
 Why Use NodeJS as a Server?
 	- It re-uses Javascript = meaning a front end javascript developer can also build an entire server themselves
-	- Its easily extendable = numerous plugins exist to expand the capabilities of node
+	- Its easily extendable = numerous plugins exist to expand the capabilities of nodeti
 	- Fast Implementation = which allows for the creation of an entire working server with only a few lines of code
 	- Single Threaded Asycncronous Model = meaning the server handles all requests using a single thread through event based	  callbacks. No limit on requests. No bottleneck.
+
+Look up Node: 'exports' documentation and 'require' documentation
+
+To import libraeries, you use the require' keyword.
+	ex: var fs = require('fs');
+
+	Terminology:
+		fs.writeFile('movies.txt', 'inception, die hard', function(){
+			console.log('complete')
+		}
+
+		console.log('hello world');
+
+		'hello world' appears first!!! Because of the time it takes to read to the data inside.
+
+		This shows how Node is asychronous!!
+
+		fs.readFile('movies.txt', 'utf8', function(error, data){
+			if(error){
+				console.log('there is an error');
+			}
+			else{
+			console.log(data);
+			}
+		})
+
+		If you want it to wait:
+			var fileContents = fs.writeFileSync('movies.txt', 'random text blah blah blah');
+
+			var readFile = fs.readFileSync('movies.txt', 'utf8'); 
+
+			console.log(readFile); //Shows the contents of the file
+
+			*This is not favorable on web server, because people would have to wait
