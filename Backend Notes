@@ -57,3 +57,12 @@ To import libraeries, you use the require' keyword.
 			console.log(readFile); //Shows the contents of the file
 
 			*This is not favorable on web server, because people would have to wait
+
+
+Another library is request:
+	ex: var request = require('request');
+
+	request('')
+
+
+require('request') = example of pulling an api from backend, similar to ajax call
