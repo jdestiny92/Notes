@@ -66,3 +66,12 @@ Another library is request:
 
 
 require('request') = example of pulling an api from backend, similar to ajax call
+
+Look up inquier library from npm
+
+WHEN LOOKING UP OTHER JS FILES, DO require('/.liri.js'), you NEED the /. to access a file in the same directory!!!!!
+
+
+
+Look up how to set up a 'constructor' function!!! it uses keyword 'this'; also the function is called 'Animal'
+capital letters to start functions almost guarentee constructor function
