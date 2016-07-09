@@ -75,3 +75,6 @@ WHEN LOOKING UP OTHER JS FILES, DO require('/.liri.js'), you NEED the /. to acce
 
 Look up how to set up a 'constructor' function!!! it uses keyword 'this'; also the function is called 'Animal'
 capital letters to start functions almost guarentee constructor function
+
+
+Look up prototype, in terms of modifying class definition.

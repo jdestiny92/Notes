@@ -17,4 +17,4 @@ var cats = new Animal({raining: false, noise: "Meow!", color: 'yellow'});
 console.log(dogs);
 console.log(cats);
 
-dogs.makeNoise();
+dogs.makeNoise(); 
