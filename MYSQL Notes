@@ -1,0 +1,40 @@
+MYSQL Notes
+
+-- Makes it so all of the following code will affect favorite_Db
+CREATE DATABASE favorite_db;
+
+USE favorite_db;
+
+-- Creates the table 'favorite_foods' within the favorite_db
+CREATE TABLE favorite_foods (
+-- Makes a string column called 'food' which cannot contain null
+food VARCHAR(50) NOT NULL,
+-- Makes a numeric column called 'score'
+score INTEGER);
+
+CREATE TABLE favorite_songs (
+song VARCHAR(100) NOT NULL,
+artist VARCHAR(50),
+score INTEGER);
+
+CREATE TABLE favorite_movies (
+-- Creates a numeric column called 'id' 
+id INTEGER(11) auto_increment NOT NULL,
+movie VARCHAR(100) NOT NULL,
+five_times BOOLEAN DEFAULT FALSE,
+score INTEGER(10),
+PRIMARY KEY (id)
+);
+
+
+USE animals_db;
+
+#select data drom people table
+select * from people;
+
+#insert
+INSERT INTO people (name, has_pet, pet_name, pet_age) VALUES ('matt', true, 'pepe', 12);
+
+#select just the name
+select name from people;
+

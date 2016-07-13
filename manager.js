@@ -31,3 +31,7 @@ var askQuestion = function(){
 
 	}
 }
+
+function beAwesome(awesomeSauce){
+	
+};

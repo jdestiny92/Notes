@@ -1,0 +1,185 @@
+Node Js Coursera Notes
+
+What is Node.js?
+	- Javascript runtime built on Chrome V8 Javascript Engine
+	- Uses an event driven, non-blocking I/O Model
+		: makes it lightweight and efficient
+	*Important: Node runs as a single threaded application, but is able to service a lot of requests
+	*Uses asychronous programming
+
+Node js Use Cases
+	- Utilities written in Javascript for web development:
+		: Bower, Grunt, Gulp, Yeoman, etc...
+	- Server side development
+		: Web server, Business logic, Database access
+
+Node Package Manager
+	- Node package manager(NPM): manages ecosystem of node modules/packages
+	- A package contains:
+		*JS files
+		* package.json (manifest)
+			- explains what this node module contains and also other dependecies are expressed here
+
+Javascript Modules
+	- Javascript does not define a standard library
+	- Common Js API fills this gap by defining APIs for common application needs
+		* It defines a module format
+		* Node follows the CommonJs module specification
+
+Node Modules
+	- Each file in Node is its own module
+	- The predefined 'module' variable gives access to the current module definition in a file
+	- The 'module.exports' variable determines the export from the current module
+	- The 'require' function is used to import a module
+	Important!: Module.exports is just a variable and you can assign anything to it, just like any other variable
+
+	A better alternative!
+		'exports' is an alias for 'module.exports', so you define multiple parts, such as:
+		 exports.perimeter = function(x,y){} OR
+		 exports.area = function(x,y){};
+
+
+Two Salient Features of Javascript
+	- First Class Functions: A function can be treated the same way as any other variable
+	- Closures:
+		* A function defined inside another function has access to all the variables declared in the outer function(outer scope)
+		* The inner function will continue to have access to the variables from the outer scope even after the outer function
+		has returned.
+
+I/O = Long Running Computation
+
+
+Node Modules
+	- File Based Node Modules(files we make)
+	- Core Modules
+		* Part of core Node
+		* Examples: path, fs, os, util...
+	- External Node modules
+		* Third party modules
+		* Installed using NPM
+		* node_modules folder in your Node application
+
+
+HTTP Protocol
+
+Client and Server
+	- Web applications are not stand alone
+	- Many of them have a 'cloud' backend
+
+Client Server Communcation
+	- Network operations cause unexpected delays
+	- You need to write all applications recognizing the asychronous nature of communication
+		* Data is not instantly available
+
+The client usually sends a request message to the server. The server will then usually contain a method, get, put, etc...
+
+
+
+Node HTTP Module
+	- Core networking module supporting a high performance foundation for a HTTP stack
+	- Using the module:
+		var http = require('http');
+	- Creating a server:
+		var server = http.createServer(function(req,res){...});
+		req = request, res = response
+	- Starting the server:
+		server.listen(port,...);
+	- req.headers gives access to all the headers in the request message in the form of a javascript object
+	- same thing with req.body
+	- examples with res:
+		res.setHeader('Content-Type', 'text/html');
+		res.statusCode = 200;
+		res.writeHead(200, {'Content-Type' : 'text/html'});
+		res.write('Hello World');
+		res.end('<html><body><h1>Hello World</h1></body></html>');
+
+
+Express Notes!!!!
+
+What is Express
+	- Express: Fast, unopinionated, minimalist web framework for Node.js (from expressjs.com)
+	- Web application framework that provides a robust set of features
+	- Many third party middleware to extend functionality
+	- Installing Express: in your project folder do: npm install express --save
+
+Express Middleware
+	- Middleware provides a lot of plug in functionality that can be used within your Express application
+	- Example: 'morgan' for logging
+		var morgan = require('morgan');
+		app.use(morgan('dev'));
+	- Serving static web resources:
+		app.use(express.static(__dirname + '/public'));
+		__filename and __dirname give you the full path to the file and directory for the current module
+
+
+
+Representational State Transfer (REST)
+
+Web Services
+	- A system designed to support interoperability of systems connected over a network
+		Service oriented architecture (SOA)
+		A standardized way of integrating web based applications using open standards operating over the Internet
+	- Two common approaches used in practice
+		SOAP(Simple Object Access Protocol) based services
+			* Uses WSDL (Web Services Description Language)
+			* XML Based
+		REST(Representational State Transfer)
+			* Use Web standards
+			* Exchange of data using either XML or JSON
+			* Simpler compared to SOAP, WSDL, etc...
+
+Representational State Transfer(REST)
+	- A style of software architecture for distributed hypermedia systems such as the World Wide Web
+	- A collection of network architecture principles which outline how resources are defined and addressed
+	- Four Basic Design Principles:
+		* Use HTTP methods explicitly
+		* Be stateless
+		* Expose directory structure-like URIs
+		* Transfer using XML, JSON, or both
+	- The motivation for REST was to capture the characteristics of the Web that made the Web succesful
+		* URI (Uniform Resource Indicator) Addressable resources
+		* HTTP Protocol
+		* Make a Request - Receive Response - Display Response
+	- Exploits the use of the HTTP protocol beyond HTTP POST and HTTP GET
+		* HTTP PUT, HTTP DELETE
+		* Preserve idempotence (eye - dem - po - tense), figuring out with requests preserve the state or not
+	- REST uses URI to identify resources(anything that can be named, type of file, etc...)
+		* http://www.conFusion.food/dishes/
+		* http://www.conFusion.food/promotions/
+	- Verbs corresponding to the CRUD operations
+		* Create: HTTP POST
+		* Read : HTTP GET
+		* Update : HTTP PUT
+		* Delete : HTTP DELETE
+
+Stateless Server
+	- Server side should not track the client state:
+		* Every request is a new request from the client
+	- Client side should track its own state:
+		* E.g., using cookies, client side database
+		* Every request must include sufficient information for server to serve up the requested information
+		* Client side MVC setup
+
+
+
+Express Router
+
+Express Application Rules
+	- Identify and endpoint with a URI
+	- Apply the verb on the URI
+	- Express supports this through app.all, app.get, app.post, app.put, app.delete methods
+	- Express allows us to apply functionality to different routes
+
+Routes with Parameters
+	- Example: 
+	app.get('/dishes/:dishId', function(req, res, next){
+		res.end('Will send details of the dish:' + req.params.dishId + ' to you!') 
+	});
+	- res.params is a javascript object that comes in, console log to learn more!
+
+Body Parser
+	- Middleware to parse the body of the message
+	- Using Body Parser:
+		var bodyParser = require('body-parser');
+		app.use(bodyParser.json()); //parse the JSON in the body
+	- Parses the body of the message and populates the req.body property, makes it available as a javascript object
