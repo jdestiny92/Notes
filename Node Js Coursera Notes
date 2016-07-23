@@ -256,3 +256,20 @@ MongoDB ObjectID
 			'name' : 'Uthapizza',
 			'description' : 'test'
 		}
+
+
+SYNTAX:
+	- use 'mongod' to start the server
+	- then open a seperate command window, type 'mongo' to access envirmonment and key commands
+
+
+Node MongoDB Driver
+	- Provides a high level API for a Node application to interact with the MongoDB Server
+	- Installation: npm install mongodb --save
+
+MongoDB Driver
+	- The Node MongoDB Driver supports several operations that can be performed from a Node application
+		* Connecting to a MongoDB
+		* Inserting, deleting, updating, and querying documents
+	- Supports both callback based and promise based interactions
+

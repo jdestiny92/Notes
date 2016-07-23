@@ -1,0 +1,24 @@
+Express Notes
+
+Pay attention!!!
+
+Server - code than handles requests and responds to them.
+
+Servers live in dedicated hardware intended to handle ALL the requests and responses of many clients.
+Servers can live most often on cloud platforms, ex: heroku
+
+Express - web framework for node to make creating code for server much simpler
+
+A route is like a map...
+	* /join = user is shown the 'join' page
+	* /add = user is shown the 'add' page
+	* /search/:name = user is shown the 'search' page with just the results relevant to the name
+
+Body parser formats your post data in nice objects
+
+Look up route 'wildcard'
+
+
+_ _ dirname = keyword in node, gives current directory name
+
+the path native module simply puts string or paths together
