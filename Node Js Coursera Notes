@@ -273,3 +273,25 @@ MongoDB Driver
 		* Inserting, deleting, updating, and querying documents
 	- Supports both callback based and promise based interactions
 
+
+MongoDb
+	- MongoDB stores data in the form of documents
+	- No structure imposed on the document
+		* any document can be stored in any collection
+		* relies on developer's discipline to maintain the structure of the documents
+
+Mongoose
+	- Mongoose ODM
+		* Object Data Model
+		* Object Document Mapping
+		* Object Relational Mapping (ORM)
+	- Adds structure to MongoDB documents through schema
+
+Mongoose Schema
+	- Schema:
+		* Structure of the data to be stored
+		* Defines all the fields of your document and their types
+			- Can do validation
+	- Schema types: string, number, date, buffer, boolean, mixed, objectID, array
+	- Schema is used to create a Model function
+
