@@ -295,3 +295,10 @@ Mongoose Schema
 	- Schema types: string, number, date, buffer, boolean, mixed, objectID, array
 	- Schema is used to create a Model function
 
+
+HTTP Basic Access Authenication
+	- Method for HTTP user agent to provide username and password with a request
+	- Server can challenge a client to authenticate itself
+	- Client needs to send the username and password in response
+
+	

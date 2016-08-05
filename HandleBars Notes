@@ -1,0 +1,6 @@
+HandleBars Notes
+
+Always need to pass in an object with a 'key' when rendering
+
+on templates, can use {{#each events}} to cycle through an array of objects
+
