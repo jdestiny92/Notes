@@ -301,4 +301,49 @@ HTTP Basic Access Authenication
 	- Server can challenge a client to authenticate itself
 	- Client needs to send the username and password in response
 
-	
+
+Authorization Header
+	- The Authorization header is constructed as follows:
+		1. Username and password are combined into a string 'username.password'
+		2. The resulting string literal is then encoded using Base64
+		3. The authorization method and a space, i.e, 'Basic' is then put before the encoded string
+	- Example: Basic jiojdfoidjoifjdoifjaiojijfoi
+
+
+HTTP is a stateless protocol, this means that every request coming in from a client is treated as a new request
+
+HTTP Cookies
+	- small piece of data sent from a web server and stored on the client side
+	- each subsequent request from the client side should include the cookie in the request header
+
+Express and Cookies
+	- Server can set a cookie as follows in any of the middleware: res.cookie(name, value, options)
+	- Cookies are parsed in Express server using the cookie-parser middleware
+		* var cookieParser = require('cookie-parser');
+		* app.use(cookieParser());
+	- Cookie-parser parses incoming cookies and attches them to request
+		* req.cookies.name
+
+Express and Signed Cookies
+	- Signed Cookie: signed with a secret key on the server side
+		* Digital signature with key-hash message authenication code (verifiable)
+	- Cookie parser supports signed cookies:
+		* var cookieParser = require('cookie-parser');
+		* app.use(cookieParser('secret key'));
+	- Parsed signed cookies made available as: req.signedCookies.name
+
+Express Sessions
+	- Used to track user sessions
+		* Combination of cookie with session id and server side storage of information indexed by session id
+		* Session information:
+			- stored by default in memory (wiped out when server restarts)
+			- stored in permanent store on server side
+			- distributed session store if using multiple replicated servers
+
+Express Session Middleware
+	- var session = require('express-session');
+	- var FileStore = require('session-file-store')(session);
+	- Express session information available as: req.session.name
+
+
+Token Based Authentication

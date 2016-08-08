@@ -23,3 +23,6 @@ _ _ dirname = keyword in node, gives current directory name
 
 the path native module simply puts string or paths together
 
+
+
+In order to chain 'then' you always need to 'return' something to go off of......
