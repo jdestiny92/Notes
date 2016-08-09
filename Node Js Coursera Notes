@@ -347,3 +347,72 @@ Express Session Middleware
 
 
 Token Based Authentication
+	- Cookie based authenication does not scale very well...
+
+Cookie + Session Based Authentication
+	- Cookies set on the client side by the server
+	- Cookies used as a storage for session ID that is used as an index into server side storage of session information
+
+Why Token Based Authentication?
+	- Session authentication becomes a problem when we need stateless server and scalability
+	- Mobile applications platforms have a hard time handling cookies/sessions
+	- Sharing authentication with other applications not feasible
+	- Cross origin sharing (CORS) problem
+	- Cross site request forgery (CSRF)
+
+Toked Based Authentication
+	- User requests access with their username and password
+	- Server validates credentials
+	- Server creates a signed token and sends it to the client (nothing stored on the server)
+	- All subsequent requests from the client should include the token
+	- Server verifies the token and responds with data if validated
+
+JSON Web Tokens (JWT)
+	- Self Contained (carry all the information necessary within itself)
+	- Shareable (Can share it with other applications to act on your behalf)
+
+jsonwebtoken Node Module
+	- Implementation of JSON web tokens support
+		* npm install jsonwebtoken --save
+	- Provides several methods:	
+		* sign() for signing and issuing token
+		* verify() for verifying and decoding token and making it available on the request property in Express
+
+
+Passport
+	- authentication middleware for Node js
+	- modular, flexible
+	- supports variable strategies for authentication
+		* local strategy
+		* openID
+		* Oauth (Facebook, Twitter, G+, etc.) single sign-on
+	- Installing: npm install passport --save
+
+Passport Example
+	- app.post('/login', passport.authenticate('local'), function(req, res){
+		//if this function gets called, authentication was successful.
+		//'req.user' contains the authenticated user
+
+		res.redirect('/users' + req.user.username);
+	})
+
+Passport Local
+	- passport strategy for authenticating a user with a username and password
+	- installing: npm intall passport-local --save
+
+Passport Local Mongoose
+	- mongoose plugin to simplify building username and password login
+	- installing: npm install passport-local-mongoose --save
+	- makes variable Mongoose schema support for managing users
+	- Example
+		var mongoose = require('mongoose');
+		Schema = mongoose.Schema,
+		passportLocalMongoose = require('passport-local-mongoose');
+
+		var User = new Schema({});
+
+		User.plugin(passportLocalMongoose);
+
+		module.exports = mongoose.model('User', User);
+	- End of Example
+
